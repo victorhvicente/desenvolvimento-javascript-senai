@@ -1,0 +1,18 @@
+Requisitos Funcionais (RF) 
+
+1 - Permitir que os usuários preencham campos com dados pessoais.
+2 - Opção login, preencher os campos de email e senha.
+3 - Opção Cadastro, Fazer cadastro com os seguintes dados: Nome, Email, Celular, RG, Senha.
+4 - Fornecer opções de recuperação de conta, como por exemplo a troca de senha..
+5 - Campo para atualizar algum dado.
+
+Requisitos Não Funcionais (RNF)
+
+1 - Sistema deve ser funcional em diversos plataformas.
+2 - Possuir uma interface intuitiva.
+3 - Acessibilidade
+
+Regras de Negócio (RN)
+
+1 - Bloquear o acesso a conta após varias tentativas de login.
+2 - Uma mensagem de alerta após inserir um dado incorreto para login.

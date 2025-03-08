@@ -1,0 +1,14 @@
+Requisito funcionais.
+
+1 - O sistema deve oferecer um campo de buscas de um determinado livro por titulo ou nome do autor.
+2 - O sistema deve informar se a biblioteca possui o livro desejado no acervo.
+3 - O sistema deve informar se o livro esta disponível para empréstimo ou não.
+4 - O sistema deve gerenciar os usuários cadastrados na biblioteca.
+5 - O sistema deve registrar o dia inicial do empréstimo e o dia final do empréstimo.
+
+Requisito não funcionais.
+
+1 - O sistema deve ter opções de acessibilidade
+2- O sistema deve suportar uma quantidade de 1000 pessoas acessando simultaneamente.
+3- O sistema deve ser acessível por diferentes navegadores, Chrome, Mozilla, Opera
+4- O sistema deve ser compatível por diferentes sistemas operacionais, Windows, Linux, MacOS.

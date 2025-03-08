@@ -1,0 +1,61 @@
+1) mkdir projeto inicial
+cd projeto inicial
+mkdir html
+mkdir css
+mkdir js
+mkdir assets
+
+2) cd html
+dir
+cd ..
+cd css
+dir
+cd ..
+cd js
+dir
+cd ..
+cd assets
+dir
+
+3)cd ..
+cd html
+echo Bem-vindo ao Projeto Inicial > index.html
+cd ..
+cd css
+echo body { font-family: Arial, sans-serif; background-color: beige} > style.css
+
+4) cd ..
+cd assets
+mkdir img
+mkdir fonts
+
+5) cd ..
+cd css
+move style.css ../assets
+
+6)cd ..
+cd assets
+dir
+
+7)cd ..
+cd js
+echo  console.log("Script carregado!"); > script.js
+echo  console.log("Aplicação Iniciada!"); > app.js
+
+8) cd ..
+cd html
+copy index.html ..\assets
+
+9) cd ..
+cd js
+rename app.js main.js
+
+10) cd ..
+tree /f
+
+11) cd assets
+del index.html
+
+12) cd ..
+cd html 
+notepad index.html
