@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        input:focus {
+        outline: none;             
+        border: none;                
+
+        }
+    </style>
+    <title>aula HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Plataforma de Cursos do Senai</h1>
+        <nav>
+            <ul>
+                <li>Principal</li>
+                <li>Área do Aluno</li>
+                <li>Sobre o Senai</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h3>Meus Cursos Inscritos</h3>
+            <p>Bem-vindo a área do aluno</p>
+            <p>Programe-se para concluir as atividades dentro do prazo.</p>
+            <p>Em caso de dúvidas, entre em contato com suporte.</p>
+
+            <h4>Cursos em Andamento</h4>
+            <ul>
+                <li><strong>Desenvolvimento JavaScript</strong> - Progresso: 35%</li>
+                <li><strong>Interfaces com Bootstrap</strong> - Progresso: 20%</li>
+                <li><strong>Bootcamp Java/Springboot</strong> - Progresso: 90%</li>
+            </ul>
+
+            <h4>Cursos Concluidos</h4>
+            <ol>
+                <li><strong>Banco de dados MongoDB</strong> - Concluido em 02/07/2024</li>
+                <li><strong>Framework React</strong> - Concluido em 30/12/2024</li>
+                <li><strong>Programação orientada a objetos com PHP</strong> - Concluido em 01/05/2024</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Alunos em Destaque</h3>
+            <dl>
+                <dt><strong>Desenvolvimento JavaScript</strong></dt>
+                <dd>Peter Park - Nota: 10.0</dd>
+                <dd>Bruce Wayne - Nota: 10.0</dd>
+
+                <dt><strong>Bootcamp Java/Springboot</strong></dt>
+                <dd>Diana Prince - Nota: 10.0</dd>
+                <dd>Clark Kent - Nota: 10.0</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h3>Calendário das Aulas</h3>
+            <p>Fique atento ao <b>prazo</b> das <strong>atividades</strong></p>
+            <p>Fique atento ao <i>prazo</i> das <em>atividades</em></p>
+            <p>Esse é texto <sup>sobrescrito</sup> e <sub>subscrito</sub></p>
+            <p>Texto <ins>inserido</ins> e texto <del>excluido</del></p>
+            <p>Mias um texto, agora <small>pequeno</small> e <mark>destacado</mark></p>
+        </section>
+
+        <section>
+            <h3>Material Complementar</h3>
+            <a href="https://sp.senai.br/unidade/presidenteprudente/" target="_blank"><img src="https://cronos-media.sesisenaisp.org.br//api/media/1-0/files?img=img_1_230829_d339a06d-6dca-4a91-b890-a0eba7ca4c5f_o.avif" alt="Fotografia do Senai" width="150px" height="150px"></a>
+        </section>
+
+        <section>
+            <h3>Financeiro</h3>
+            <table border="1px">
+                <tr>
+                    <th>Mês</th>
+                    <th>Valor</th>
+                    <th>Situação</th>
+                </tr>
+                <tr>
+                    <td>Fevereiro</td>
+                    <td>R$ 100,00</td>
+                    <td>Pago</td>
+                </tr>
+                <tr>
+                    <td>Março</td>
+                    <td>R$ 100,00</td>
+                    <td><mark>Em aberto</mark></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>Videoaula da Semana</h3>
+            <video src="file_example_MP4_480_1_5MG.mp4" width="250px" height="250px" controls></video>
+            
+
+            <h3>Podcast</h3>
+            <audio controls>
+                <source src="file_example_MP3_700KB.mp3" type="audio/mp3">
+                Seu navegador não suporta o áudio
+            </audio>
+        </section>
+
+        <section>
+            <h3>Solicitação de Certificado</h3>
+            <form action="" method="get">
+                <label for="name">Nome </label><br>
+                <input type="text" name="name" id="name" placeholder="Digite seu nome" required><br><br>
+
+                <label for="email">Email </label><br>
+                <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required><br><br>
+
+                <label for="curse">Curso</label><br>
+                <select name="curse" id="curse" required>
+                    <option value="">Selecione</option>
+                    <option value="js">Desenvolvimento JavaScript</option>
+                    <option value="java">Bootcamp Java/Springboot</option>
+                    <option value="MongoDB">Banco de dados MongoDB</option>
+                </select ><br><br>
+
+                <label for="obs">Observações</label><br>
+                <textarea name="obs" id="obs" cols="50" placeholder="Se houver alguma uma obrservação, informe nesse campo"></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+   
+</body>
+</html>
