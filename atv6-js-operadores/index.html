@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Operadores</title>
+</head>
+<body>
+    <script>
+
+        let num1String = prompt("Digite o primeiro número: ");
+        let num2String = prompt("Digite o segundo número: ");
+        let num3String = prompt("Digite o terceiro número: ");
+
+        let num1 = parseInt(num1String);
+        let num2 = parseInt(num2String);
+        let num3 = parseInt(num3String);
+
+        // 1. Soma
+        let soma = num1 + num2;
+        console.log(`A Soma entre ${num1} e ${num2} é: ${soma}`);
+
+        // 2. Subtração
+        let subtracao = num1 - num2;
+        console.log(`A Subtração entre ${num1} e ${num2} é: ${subtracao}`);
+
+        // 3. Multiplicação
+        let multiplicacao = num1 * num2;
+        console.log(`A Multiplicação entre ${num1} e ${num2} é: ${multiplicacao}`);
+
+        // 4 Divisão
+        let divisao = num1 / num2;
+        console.log(`A Divisão entre ${num1} e ${num2} é: ${divisao.toFixed(2)}`);
+
+        // 5 Módulo. 
+        let modulo = num1 % num2;
+        console.log(`O Resto da divisão entre ${num1} e ${num2} é: ${modulo}`);
+        
+        // 6 Sucessor. 
+        console.log(`O Sucessor de ${num1} é ${num1 += 1}`);
+
+        // 7. Antecessor
+        console.log(`O Antecessor de ${num1} é ${num1 -= 1}`);
+
+        // 8. Soma
+        function somar(num1, num2, num3){
+            return num1 + num2 + num3;
+        }
+        let somaResultado = somar(num1, num2, num3);
+        console.log(`A Soma dos três numeros é: ${somaResultado}` );
+
+        // 9. Média
+        function media (num1, num2, num3){
+            return (num1 + num2 + num3) / 3
+        }
+        let mediaNumeros = media(num1, num2, num3);
+        console.log(`A Média entre os três numeros é: ${mediaNumeros.toFixed(2)}`);
+
+        // 10. Área do círculo
+        let pi = 3.14;
+        let raio = 10;
+        let areaCirculo = (pi) * raio ** 2;
+        console.log(`Àrea do circulo é ${areaCirculo}`); 
+
+        // 11. Verdadeiro ou Falso
+        
+        let idade = parseInt(prompt("Informe sua idade: "));
+        let verificarIdade = idade >= 18 ? (true) : (false);
+        console.log(verificarIdade);
+
+        // 12. Verdadeiro ou Falso
+        let verificarPositivoFalso = num1 > 0 ? (true) : (false);
+        console.log(verificarPositivoFalso);
+
+        // 13. Verdadeiro ou Falso
+        let n = 574;
+        if(n % 2 === 0){
+            console.log(true);
+        }
+        else {
+            console.log(false);
+        }
+        
+        // 14. Verdadeiro ou Falso
+        let numero1 = 40;
+        let numero2 = 60;
+        let maior = numero1 > numero2 ? (true) : (false);
+        console.log(maior);
+
+        // 15. Verdadeiro ou Falso
+        let numeroEscolhido = 16;
+        let result = numeroEscolhido >= 10 && numeroEscolhido <= 20 ? (true) : (false);
+        console.log(result);
+    </script>
+</body>
+</html>
