@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Condicionais JavaScript</title>
+</head>
+<body>
+    <h1>Exemplo de Condicionais JavaScript</h1>
+
+    <script>
+
+        var idade = 18;
+
+        if(idade < 18){
+            console.log("Menor de idade.");
+        }
+        else{
+            console.log("Maior de idade.");
+        }
+
+        
+        if(idade < 18){
+            console.log("Menor de idade.");
+        }
+        else if(idade === 18){
+            console.log("Tem exatamente 18 anos.");
+        }
+        else{
+            console.log("Maior de idade.");
+        }
+
+        // console.log(idade < 18 ? ("Menor de idade") : ("Maior de idade"));
+
+        var nota = 7;
+        var faltas = 5;
+
+        if(nota >= 7 && faltas <= 4){
+            console.log("Aluno aprovado.");
+        }
+        else{
+            console.log("Aluno reprovado.");
+        }
+
+        if(nota >= 7 || faltas <= 4){
+            console.log("Aluno aprovado.");
+        }
+        else{
+            console.log("Aluno reprovado.");
+        }
+
+        var nome = "Victor Hugo";
+        if(nome){
+            console.log(`Olá ${nome}`);
+        }
+        else{
+            console.log("Nome não informado.");
+        }
+
+        var nome = "";
+        var mensagem = ""
+        if(nome){
+            mensagem = nome;
+        }
+        else{
+            mensagem = "Nome não informado.";
+        }
+
+        console.log(mensagem);
+
+        mensagem = nome ? (nome) : ("Nome não informado. (ternário)");
+        console.log(mensagem);
+
+        var nome = "Lucas";
+        var idade = 18;
+        if(nome){
+            if(idade >= 18){
+                console.log(`${nome} é maior de idade.`);
+            }
+            else{
+                console.log(`${nome} é menor de idade.`);
+            }
+        }
+        else{
+            console.log("Nome nao informado.");
+        }
+
+        var categoria = "2";
+        switch(categoria){
+            case "1":
+                console.log("R$ 122,22");
+                break;
+            case "2":
+                console.log("R$ 22,11");
+                break;
+            default:
+                console.log("Categoria livre, pode passar!");
+
+        }   
+
+
+
+
+    </script>
+</body>
+</html>

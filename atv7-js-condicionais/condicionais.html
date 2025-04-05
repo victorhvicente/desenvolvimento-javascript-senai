@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7 - JavaScript Condicionais</title>
+</head>
+<body>
+    <script>
+        // exercicío 1
+
+        var numero  = 10;
+        if(numero > 10){
+            console.log("Maior que 10");
+        }
+        else {
+            console.log("Menor que 10");
+        }
+
+        // exercicío 2
+
+        var numero = 8577575754;
+        if(numero % 2 === 0){
+            console.log("Par");
+        }
+        else{
+            console.log("Impar");
+        }
+
+        // exercicío 3
+
+        var num1 = 500;
+        var num2 = 1300;
+        var num3 = 150;
+
+        var maior = num1;
+        var menor = num1;
+
+        if(num2 > maior){
+            maior = num2;
+        }
+        if(num2 < menor){
+            menor = num2;
+        }
+
+        if(num3 > maior){
+            maior = num3;
+        }
+        if(num3 < menor){
+            menor = num3;
+        }
+
+        console.log(`Número maior: ${maior}, número menor: ${menor}`);
+ 
+
+        // exercicío 4
+
+        // var operacao = prompt("Qual operação +,-,*,/: ");
+        var operacao = "+";
+        var numero1 = 50;
+        var numero2 = 10;
+
+        switch(operacao){
+            case "+":
+                var result = numero1 + numero2;
+                console.log(`Resultado da soma entre os números ${numero1} e ${numero2} é : ${result}`);
+                break;
+            case "-":
+                var result = numero1 - numero2;
+                console.log(`Resultado da subtração entre os números ${numero1} e ${numero2} é : ${result}`);
+                break;
+            case "*":
+                var result = numero1 * numero2;
+                console.log(`Resultado da multiplicação entre os números ${numero1} e ${numero2} é : ${result}`);
+                break;
+            case "/":
+                var result = numero1 / numero2;
+                console.log(`Resultado da divisão entre os números ${numero1} e ${numero2} é : ${result}`);
+            default:
+                console.log("Operação inválida.");
+        }
+
+    </script>
+</body>
+</html>
