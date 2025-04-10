@@ -9,91 +9,124 @@
     <script>
         // exercício 1 - verficador de notas
 
-        var nota = 7.5;
-        if(nota >= 0 && nota <= 4){
-            console.log("Aluno reprovado.");
-        }
-        else if(nota >= 5 && nota <= 6){
-            console.log("Aluno em recuperação.")
-        }
-        else if(nota >= 7 && nota <= 10){
-            console.log("Aluno aprovado.");
-        }
+        // var nota = 7.5;
+        // if(nota >= 0 && nota <= 4){
+        //     console.log("Aluno reprovado.");
+        // }
+        // else if(nota >= 5 && nota <= 6){
+        //     console.log("Aluno em recuperação.")
+        // }
+        // else if(nota >= 7 && nota <= 10){
+        //     console.log("Aluno aprovado.");
+        // }
 
         // exercício 2 - Dia da Semana
-        var dia = 1;
-        switch(dia){
-            case 1:
-                console.log("Domingo");
-                break;
-            case 2:
-                console.log("Segunda-feira");
-                break;
-            case 3:
-                console.log("Terça-feira");
-                break;
-            case 4:
-                console.log("Quarta-feira");
-                break;
-            case 5:
-                console.log("Quinta-feira");
-                break;
-            case 6:
-                console.log("Sexta-feira");
-                break;
-            case 7:
-                console.log("Sábado");
-                break;
-            default:
-                console.log("Dia inválido.");
-        }
+        // var dia = 1;
+        // switch(dia){
+        //     case 1:
+        //         console.log("Domingo");
+        //         break;
+        //     case 2:
+        //         console.log("Segunda-feira");
+        //         break;
+        //     case 3:
+        //         console.log("Terça-feira");
+        //         break;
+        //     case 4:
+        //         console.log("Quarta-feira");
+        //         break;
+        //     case 5:
+        //         console.log("Quinta-feira");
+        //         break;
+        //     case 6:
+        //         console.log("Sexta-feira");
+        //         break;
+        //     case 7:
+        //         console.log("Sábado");
+        //         break;
+        //     default:
+        //         console.log("Dia inválido.");
+        // }
 
         // Exercício 3 - Classificação de Idade
 
-        let idade = parseInt(prompt("Digite sua idade:"));
+        // let idade = parseInt(prompt("Digite sua idade:"));
 
-        if (idade >= 0 && idade <= 12) {
-        alert("Criança");
-        } else if (idade >= 13 && idade <= 17) {
-        alert("Adolescente");
-        } else if (idade >= 18 && idade <= 59) {
-        alert("Adulto");
-        } else if (idade >= 60) {
-        alert("Idoso");
-        } else {
-        alert("Idade inválida!");
+        // if (idade >= 0 && idade <= 12) {
+        // alert("Criança");
+        // } else if (idade >= 13 && idade <= 17) {
+        // alert("Adolescente");
+        // } else if (idade >= 18 && idade <= 59) {
+        // alert("Adulto");
+        // } else if (idade >= 60) {
+        // alert("Idoso");
+        // } else {
+        // alert("Idade inválida!");
+        // }
+
+        //Exercício 4 - Estações do Ano
+        // let mes = parseInt(prompt("Digite um número de 1 a 12 para o mês:"));
+        // let estacao = "";
+
+        // switch (mes) {
+        // case 12:
+        // case 1:
+        // case 2:
+        //     estacao = "Verão";
+        //     break;
+        // case 3:
+        // case 4:
+        // case 5:
+        //     estacao = "Outono";
+        //     break;
+        // case 6:
+        // case 7:
+        // case 8:
+        //     estacao = "Inverno";
+        //     break;
+        // case 9:
+        // case 10:
+        // case 11:
+        //     estacao = "Primavera";
+        //     break;
+        // default:
+        //     estacao = "Mês inválido!";
+        // }
+
+        // alert(estacao);
+
+
+        //Exercício 5 - Login Simples
+        // let usuario = prompt("Digite o nome de usuário:");
+        // let senha = prompt("Digite a senha:");
+
+        // if (usuario === "admin" && senha === "1234") {
+        //     alert("Login bem-sucedido");
+        // } else {
+        //     alert("Usuário ou senha incorretos");
+        // }
+
+        // Exercício 6 - Classificação de Notas com Switch
+
+        let nota = parseInt(prompt("Digite sua nota (0 a 10):"));
+
+        switch (true) {
+            case (nota >= 0 && nota <= 4):
+                alert("Insuficiente");
+                break;
+            case (nota >= 5 && nota <= 6):
+                alert("Regular");
+                break;
+            case (nota >= 7 && nota <= 8):
+                alert("Bom");
+                break;
+            case (nota >= 9 && nota <= 10):
+                alert("Excelente");
+                break;
+            default:
+                alert("Nota inválida");
         }
 
-        //Exercío 4 - Estações do Ano
-        let mes = parseInt(prompt("Digite um número de 1 a 12 para o mês:"));
-        let estacao = "";
-
-        switch (mes) {
-        case 12:
-        case 1:
-        case 2:
-            estacao = "Verão";
-            break;
-        case 3:
-        case 4:
-        case 5:
-            estacao = "Outono";
-            break;
-        case 6:
-        case 7:
-        case 8:
-            estacao = "Inverno";
-            break;
-        case 9:
-        case 10:
-        case 11:
-            estacao = "Primavera";
-            break;
-        default:
-            estacao = "Mês inválido!";
-        }
-
-        alert(estacao);
 
 
     </script>
