@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetições</title>
+</head>
+<body>
+    <h1>Exemplos de Repetições</h1>
+
+    <script>
+
+        for(i = 0; i <= 10; i++){
+            console.log(`Repetição com FOR, Posição: ${i}`);
+        }
+
+        for(j = 0; j <= 20; j+=2){
+            console.log(j);
+        }
+
+        alunos = ["João", "Maria", "José", "Pedro"];
+
+        for(i = 0; i < alunos.length; i++){
+            console.log(alunos[i]);
+        }
+
+        delete alunos[0];
+        for(var aluno of alunos){
+            console.log(aluno);
+        }
+
+        var carro = {
+            "ano": 1977,
+            "modelo": "Opala Comodoro",
+            "cor": "Preto Fosco" 
+        }
+
+        for(var chave in carro){
+            console.log(carro[chave]);
+        }
+
+        var contador = 0;
+        while(contador < 5){
+            
+            console.log(contador)
+
+            contador++;
+        }
+
+        var numero = 0;
+        var soma = 0;
+        while(numero <= 10){
+            // soma = soma + numero;
+            numero++;
+            soma += numero;
+            console.log("Soma: ", soma);
+        }
+        console.log(soma);
+
+        var x = 0;
+        while (x <= 20){
+            if(x === 5){
+                console.log("break");
+                break
+            }
+            console.log(x);
+            x++;
+        }
+
+        var y = 0;
+        while (y <= 20){
+            y++;
+            if(y % 2 != 0){
+                continue;
+            }
+            console.log(y);
+        }
+
+        var count = 10;
+        do {
+            console.log("DO WHILE", count);
+            count++;
+        } while (count < 5);
+
+
+
+
+    </script>
+</body>
+</html>
