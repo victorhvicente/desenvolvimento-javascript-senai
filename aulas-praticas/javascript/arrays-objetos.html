@@ -9,16 +9,67 @@
     <h1>Arrays e Objetos</h1>
 
     <script>
+        // Cria um array com algumas frutas
         var frutas = ["Banana", "Laranja", "Maça", "Abacaxi", "Pêra", "Kiwi"];
+    
+        console.log(frutas); // Mostra todas as frutas
+        console.log(frutas[3]); // Mostra a fruta na posição 3: "Abacaxi"
+        console.log(frutas.length); // Mostra o total de elementos no array (6)
+        console.log(frutas[frutas.length - 1]); // Mostra a última fruta do array: "Kiwi"
+    
+        frutas.push("Manga"); // Adiciona "Manga" ao final do array
         console.log(frutas);
-        console.log(frutas[3]);
-        console.log(frutas.length);
-        console.log(frutas[frutas.length - 1]);
-
-        frutas.push("Manga");
+    
+        frutas[1] = "Abacate"; // Substitui o item da posição 1 ("Laranja") por "Abacate"
         console.log(frutas);
-        frutas[1] = "Abacate";
+    
+        frutas.unshift("Uva"); // Adiciona "Uva" no início do array
         console.log(frutas);
+    
+        frutas.pop(); // Remove o último item do array ("Manga")
+        console.log(frutas);
+    
+        frutas.shift(); // Remove o primeiro item do array ("Uva")
+        console.log(frutas);
+    
+        frutas.splice(1, 1); // Remove 1 item a partir do índice 1
+        console.log(frutas);
+    
+        // splice(posição, quantos vou remover, o que vou adicionar...)
+        frutas.splice(1, 0, "Abacate", "Pitaya"); // A partir da posição 1, não remove nada, e adiciona "Abacate" e "Pitaya"
+        console.log(frutas);
+    
+        console.log(frutas.slice(0, 2)); // Cria uma cópia com os itens do índice 0 até antes do 2 (2 primeiros elementos)
+    
+        console.log(frutas.includes("Banana")); // Verifica se "Banana" está no array → true
+        console.log(frutas.includes("banana")); // Verifica "banana" (com b minúsculo) → false (case sensitive)
+    
+        console.log(frutas.indexOf("Banana")); // Retorna o índice da fruta "Banana" no array
+        console.log(frutas.indexOf("banana")); // Retorna -1 porque "banana" não existe no array (case sensitive)
+    
+        // Criação de objeto "pessoa" com algumas propriedades
+        var pessoa = {
+            "nome": "Victor",
+            "idade": 24,
+            "altura": 1.80,
+            "CPF": "444.444.444-11"
+        }
+    
+        console.log(pessoa); // Mostra todo o objeto
+        console.log(pessoa.nome); // Acessa a propriedade "nome" usando ponto
+        console.log(pessoa["nome"]); // Acessa a propriedade "nome" usando colchetes
+    
+        pessoa.cidade = "Presidente Prudente - SP"; // Adiciona nova propriedade "cidade"
+        console.log(pessoa);
+    
+        pessoa.idade = 25; // Altera o valor da propriedade "idade" para 25
+    
+        delete pessoa.cidade; // Remove a propriedade "cidade" do objeto
+        console.log(pessoa);
+    
+        console.log("nome" in pessoa); // Verifica se a propriedade "nome" existe no objeto → true
+        console.log(Object.values(pessoa).includes("Victor")); // Verifica se "Victor" está entre os valores do objeto → true
     </script>
+    
 </body>
 </html>

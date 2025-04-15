@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Exemplo de Funções</h1>
+
+    <script>
+
+        function saudacao(){
+            console.log("Olá Victor.");
+            console.log("Sábado 12/02/2025");
+        }
+
+        saudacao();
+        console.log("------------------------------");
+
+        function saudacaoComArgumento(nome){
+            console.log(`Olá mundo! Eu sou o ${nome}`);
+        }
+
+        saudacaoComArgumento("Victor");
+        saudacaoComArgumento("Vicente");
+        console.log("------------------------------");
+
+        function saudacaoComArgOpcional(nome, saudacao = "Olá"){
+            console.log(saudacao + ", " + nome);
+        }
+
+        saudacaoComArgOpcional("Victor");
+        saudacaoComArgOpcional("Maria", "Oi");
+        console.log("------------------------------");
+
+        function somar(numero1, numero2){
+            console.log(`Resultado da soma entre ${numero1} e ${numero2} = ${numero1 + numero2}`);
+        }
+
+        somar(10, 40);
+        somar(20, 1000);
+        console.log("------------------------------");
+
+        function somarRetorno(numero1, numero2){
+            return numero1 + numero2;
+        }
+
+        var resultadoDaSoma = somarRetorno(20, 20);
+        console.log("Resultado da soma = ", resultadoDaSoma);
+        console.log("------------------------------");
+
+        function media(n1, n2, n3){
+            return (n1 + n2 + n3) / 3;
+        }
+
+        var media = media(10,10,10);
+        if(media > 7){
+            console.log("Passou.");
+        }
+        else{
+            console.log("Até próximo ano.");
+        }
+
+
+    </script>
+</body>
+</html>
