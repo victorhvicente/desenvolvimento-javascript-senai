@@ -108,24 +108,24 @@
 
         // Exercício 6 - Classificação de Notas com Switch
 
-        let nota = parseInt(prompt("Digite sua nota (0 a 10):"));
+        // let nota = parseInt(prompt("Digite sua nota (0 a 10):"));
 
-        switch (true) {
-            case (nota >= 0 && nota <= 4):
-                alert("Insuficiente");
-                break;
-            case (nota >= 5 && nota <= 6):
-                alert("Regular");
-                break;
-            case (nota >= 7 && nota <= 8):
-                alert("Bom");
-                break;
-            case (nota >= 9 && nota <= 10):
-                alert("Excelente");
-                break;
-            default:
-                alert("Nota inválida");
-        }
+        // switch (true) {
+        //     case (nota >= 0 && nota <= 4):
+        //         alert("Insuficiente");
+        //         break;
+        //     case (nota >= 5 && nota <= 6):
+        //         alert("Regular");
+        //         break;
+        //     case (nota >= 7 && nota <= 8):
+        //         alert("Bom");
+        //         break;
+        //     case (nota >= 9 && nota <= 10):
+        //         alert("Excelente");
+        //         break;
+        //     default:
+        //         alert("Nota inválida");
+        // }
 
         // Exercício 7 - Verificador de Turno
 
@@ -143,24 +143,45 @@
 
         // Exercício 8 - Cálculo de IMC
 
-        const peso = parseFloat(prompt("Informe seu peso em kg:"));
-        const altura = parseFloat(prompt("Informe sua altura em metros:"));
+        // const peso = parseFloat(prompt("Informe seu peso em kg:"));
+        // const altura = parseFloat(prompt("Informe sua altura em metros:"));
 
-        const imc = peso / (altura * altura);
-        console.log(`Seu IMC é: ${imc.toFixed(2)}`);
+        // const imc = peso / (altura * altura);
+        // console.log(`Seu IMC é: ${imc.toFixed(2)}`);
 
-        if (imc < 18.5) {
-        console.log("Abaixo do peso");
-        } else if (imc < 25) {
-        console.log("Peso normal");
-        } else if (imc < 30) {
-        console.log("Sobrepeso");
-        } else {
-        console.log("Obesidade");
+        // if (imc < 18.5) {
+        // console.log("Abaixo do peso");
+        // } else if (imc < 25) {
+        // console.log("Peso normal");
+        // } else if (imc < 30) {
+        // console.log("Sobrepeso");
+        // } else {
+        // console.log("Obesidade");
+        // }
+
+        // Exercício 9 - Calculadora de Desconto Progressivo
+
+        let valorCompra = parseInt(prompt("Valor da compra: "));
+    
+        let desconto = 0;
+
+        if (valorCompra >= 100 && valorCompra < 200) {
+            desconto = 0.10;
+        } else if (valorCompra >= 200 && valorCompra < 300) {
+            desconto = 0.15;
+        } else if (valorCompra >= 300 && valorCompra < 400) {
+            desconto = 0.20;
+        } else if (valorCompra >= 400) {
+            desconto = 0.25;
         }
 
+        const valorDesconto = valorCompra * desconto;
+        const valorFinal = valorCompra - valorDesconto;
 
-
+        console.log(`Valor da compra: R$ ${valorCompra.toFixed(2)}`);
+        console.log(`Desconto aplicado: ${desconto * 100}%`);
+        console.log(`Valor do desconto: R$ ${valorDesconto.toFixed(2)}`);
+        console.log(`Valor final a pagar: R$ ${valorFinal.toFixed(2)}`);
 
 
     </script>
