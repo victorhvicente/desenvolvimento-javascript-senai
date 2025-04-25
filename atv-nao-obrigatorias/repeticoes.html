@@ -41,6 +41,45 @@
 
         console.log(`Soma de todos os valores dentro do vetor: ${soma}`);
 
+        console.log("-----------------------------------------");
+
+        // // 4. Verificação de número primo
+        // let numero = parseInt(prompt("Digite um número para verificar se é primo:"));
+        // let ehPrimo = true;
+
+        // if (numero <= 1) {
+        //     ehPrimo = false;
+        // } 
+        // else {
+        //     for (let i = 2; i < numero; i++) {
+        //         if (numero % i === 0) {
+        //             ehPrimo = false;
+        //             break;
+        //         }
+        //     }
+        // }
+
+        // if (ehPrimo) {
+        //     console.log(numero + " é um número primo.");
+        // } else {
+        //     console.log(numero + " NÃO é um número primo.");
+        // }
+
+        // 5. Contagem de vogais em uma string
+        let palavra = prompt("Digite uma palavra para contar as vogais:");
+        let contagemVogais = 0;
+        let vogais = "aeiouAEIOU";
+
+        for (let i = 0; i < palavra.length; i++) {
+            if (vogais.includes(palavra[i])) {
+                contagemVogais++;
+            }
+        }
+
+        console.log("A palavra '" + palavra + "' tem " + contagemVogais + " vogais.");
+
+        
+
     
 
 
