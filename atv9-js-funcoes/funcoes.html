@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9 - Funções</title>
+</head>
+<body>
+    <h1>Atividade 9 - Funções</h1>
+
+    <script>
+        // ATIVIDADE 1 - FUNÇÃO PARA VERIFICAR SE UM NÚMERO É PAR OU IMPAR
+        
+        // let n = prompt("Informe um número");
+
+        // function verificarParImpar(n){
+        //     if(n % 2 !== 0){
+        //         console.log("IMPAR");
+        //     }
+        //     else{
+        //         console.log("PAR");
+        //     }
+        // }
+
+        // function verificarParImpar(numero){
+        //     if(numero % 2 !== 0){
+        //         return "IMPAR";
+        //     }
+        //     else{
+        //         return "PAR";
+        //     }
+        // }
+
+        // function verificarParImpar(n){
+        //     return  n % 2 === 0 ? ("PAR") : ("IMPAR");
+        // }
+
+        // let result = verificarParImpar(n);
+        // console.log(result);
+
+        // FIM DA ATIVIDADE 1
+
+        // ATIVIDADE 2 - GERAR TABUADA, LISTA ARRAY []
+
+        let array = [2, 4, 3];
+
+        function tabuada(array){
+
+            // for(i = 0; i <= 10; i++){
+
+            //     console.log(`${array[0]} x ${i}: ${array[0] * i}`);
+            //     console.log(`${array[1]} x ${i}: ${array[1] * i}`);
+            // }
+
+            for(i = 0; i < array.length; i++){
+
+                console.log(`Tabuada do ${array[i]}`);
+            
+                for(j = 1; j <= 10; j++){
+                    console.log(`${array[i]} x ${j} : ${array[i] * j}`);
+                }
+
+                console.log("");
+            }
+
+        }
+
+        
+        // FIM ATIVIDADE 2
+
+        // // ATIVIDADE 3 IMC, RECEBER PESO E ALTURA E CALCULAR O IMC
+        // VERIFICAR SE A PESSOA ESTÁ ABAIXO DO PESO, PESO NORMAL, SOBREPESO OU OBESIDADE.
+        // ABAIXO 18.5 => ABAIXO DO PESO
+        // ENTRE 18.5 E 24.9 => PESO NORMAL
+        // IGUAL OU ACIMA DE 25 E ABAIXO DE 29.9 => SOBREPESOACIMA DE 29.9 => OBESIDADE
+
+        function imc(peso, altura){
+            let imc = peso / (altura ** 2);
+
+            switch(true){
+                case imc < 18.5:
+                    return "ABAIXO DO PESO";
+                    break;
+
+                case imc >= 18.5 && imc <= 24.9:
+                    return "PESO NORMAL";
+                    break;
+
+                case imc >= 25 && imc <= 29.9:
+                    return "SOBREPESO";
+                    break;
+
+                case imc > 29.9:
+                    return "OBESIDADE";
+                    break;
+
+                default:
+                    return "ERRO";
+            }
+        }
+
+        let result = imc(80, 1.80);
+        console.log(result);
+
+        // FIM ATIVIDADE 3
+
+        // ATIVIDADE 4  - VERIFICAR SE O ANO É BISSEXTO OU NÃO
+        function bissexto(ano){
+            if(ano % 4 === 0     && !(ano % 100 === 0) || ano % 400 === 0){
+                return `O Ano ${ano} é BISSEXTO`;
+            }
+            else{
+                return `O Ano ${ano} não é BISSEXTO`;
+            }
+        }
+
+        let ehBissexto = bissexto(2024);
+        console.log(ehBissexto);
+
+        // FIM ATIVIDADE 4
+    
+    </script>
+</body>
+</html>
