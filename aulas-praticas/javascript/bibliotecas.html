@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Bibliotecas</title>
+</head>
+<body>
+    <h1>Exemplo Bibliotecas</h1>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+
+        // Início da Biblioteca Math
+
+        var numero = 10.5;
+        console.log("Valor original", numero);
+        console.log("Arredondamento para baixo", Math.floor(numero));
+        console.log("Arredondamento para cima", Math.ceil(numero));
+        console.log("Arredondamento para o mais próximo", Math.round(numero));
+        
+        var array = [10, 20, 30, 40, 50];
+        console.log(`Maior valor: ${Math.max(...array)}`);
+        console.log(`Menor valor: ${Math.min(...array)}`);
+
+        console.log(`Raiz sem biblioteca: ${16 ** 0.5}`);
+        console.log(`Raiz com biblioteca: ${Math.sqrt(16)}`);
+
+        console.log(`Potência sem biblioteca: ${2 ** 3}`);
+        console.log(`Potência com biblioteca: ${Math.pow(2,3)}`);
+
+        console.log(`Valor de PI: ${Math.PI}`);
+        console.log(`Valor de PI: ${Math.PI.toFixed(2)}`);
+
+        // Fim da Biblioteca Math
+
+        // Início Biblioteca Date
+
+        var data = new Date();
+        
+        console.log(`Data atual: ${data}`);
+        console.log(`Dia: ${data.getDate()}`);
+        console.log(`Mês: ${data.getMonth()+1}`);
+        console.log(`Ano: ${data.getFullYear()}`);
+        console.log(`Hora: ${data.getHours()}`);
+        console.log(`Minuto: ${data.getMinutes()}`);
+        console.log(`Segudos: ${data.getSeconds()}`);
+        console.log(`Dia da Semana: ${data.getDay()}`);
+
+        // Fim Biblioteca Date
+
+        // Início Biblioteca JQuery
+
+        $("h1").css("color", "blue");
+
+        $("h1").css({
+            "color": "red",
+            "font-size": "50px",
+            "text-align": "center"
+        })
+
+
+
+    </script>
+</body>
+</html>
