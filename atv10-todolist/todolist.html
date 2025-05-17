@@ -20,6 +20,14 @@
     <ul class="list-group mb-3" id="listaTarefas"></ul>
 
     <p class="text-end fw-bold">Total de tarefas: <span id="contador">0</span></p>
+
+    <div class="d-flex justify-content-between mt-4">
+      <div class="upload-area">
+        <input type="file" name="upload" id="upload" accept=".json" class="d-none" onchange="uploadJson(event)">
+        <button id="btnUpload" class="btn btn-success" onclick="document.getElementById('upload').click()">Upload Json</button>
+      </div>
+      <button id="btnDownload" onclick="downloadJson()" class="btn btn-info text-white">Download Json</button>
+    </div>
   </div>
 
 <script>
@@ -46,7 +54,8 @@
     atualizarLista();
   }
 
-  function removerTarefa(){
+  function removerTarefa(item){
+    tarefas.splice(item,1);
     atualizarLista();
   }
 
@@ -61,23 +70,139 @@
       item.innerHTML = `
         ${tarefas[i]}
         <div class="float-end">
-          <button class="btn btn-sm btn-warning" onclick="editarTarefa()">Editar</button>
-          <button class="btn btn-sm btn-danger" onclick="removerTarefa()">Remover</button>   
+          <button class="btn btn-sm btn-warning text-white" onclick="editarTarefa(${i})">Editar</button>
+          <button class="btn btn-sm btn-danger" onclick="removerTarefa(${i})">Remover</button>   
         </div>
       `; 
 
       listaTarefas.appendChild(item);
+      
     }
+
+    atualizarContador();
+    salvarLocalStorage();
+    atualizarBotoes();
   }
 
-  function editarTarefa(){
+  function editarTarefa(item){
 
+    let tarefaEditada = prompt("Editar a Tarefa: ", tarefas[item]);
+
+    if(tarefaEditada.trim()  == ""){
+      alert("Texto não pode ser vazio! ");
+      return;
+    }
+
+    if(tarefas.includes(tarefaEditada)){
+      alert("Tarefa já existe na lista! ");
+      return;
+    }
+
+    tarefas[item] = tarefaEditada;  
+
+    atualizarLista();
   }
 
   function atualizarContador(){
+    
+    document.getElementById("contador").textContent = tarefas.length; 
 
   }
+
+  function salvarLocalStorage(){
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+  }
+
+  function carregarLocalStorage(){
+    let dados = localStorage.getItem("tarefas");
+
+    if(dados){
+      tarefas = JSON.parse(dados);
+      atualizarLista();
+    }
+  }
+
+  function atualizarBotoes(){
+    let btnUpload = document.getElementById("btnUpload");
+    let btnDownload = document.getElementById("btnDownload");
+
+    if(tarefas.length > 0){
+      btnDownload.disabled = false;
+      btnUpload.disabled = true;
+    } 
+    else {
+      btnDownload.disabled = true;
+      btnUpload.disabled = false;
+    }
+  }
+
+  function downloadJson(){
+    if(tarefas.length == 0){
+      alert("Não existem tarefas para baixar! ");
+      return;
+    }
+
+    let dataStr = JSON.stringify(tarefas);
+    //cria o arquivo temp
+    let blob = new Blob([dataStr], {type: "application/json"});
+    let url = URL.createObjectURL(blob);
+    //cria o link para baixar o arquivo
+    let a = document.createElement("a");
+    a.href = url;
+    a.download = "tarefas.json";
+    a.click();
+    //remove link e url do arquivo
+    URL.revokeObjectURL(url);
+    a.remove();
+  }
+
+  function uploadJson(arquivo){
+    let file = arquivo.target.files[0];
     
+    if(!file){
+      alert("Arquivo não existe");
+      return;
+    }
+
+    let reader = new FileReader();
+    reader.onload = function (e){
+      try{
+
+        let dados = JSON.parse(e.target.result);
+        
+        if(!Array.isArray(dados)){
+          alert("Arquivo JSON invalido!");
+          return;
+        }
+
+        for(let tarefa of dados){
+
+          if(typeof tarefa != "string"){
+            alert("Arquivo JSON invalido! Todos as tarefas devem ser texto! ");
+            return;
+          }
+        }
+
+        if(tarefas.length > 0){
+          alert("Para o upload funcionar, a lista tem que estar vazia! ");
+          return;
+        }
+
+        tarefas = dados;
+        atualizarLista();
+
+      }catch(error){
+        alert("Erro ao ler o arquivo JSON: " + error.message);
+      }
+    }
+
+    reader.readAsText(file);
+    arquivo.target.value = "";
+
+  }
+
+  carregarLocalStorage();
+  atualizarBotoes();
     
 </script>
 
